@@ -1,0 +1,86 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Pachinko\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7FDA718E-107C-51BA-5F8E-595786AC2DDA}|Assembly-CSharp.csproj|D:\\Pachinko\\assets\\sccripts\\gameplaypanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FDA718E-107C-51BA-5F8E-595786AC2DDA}|Assembly-CSharp.csproj|solutionrelative:assets\\sccripts\\gameplaypanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FDA718E-107C-51BA-5F8E-595786AC2DDA}|Assembly-CSharp.csproj|d:\\pachinko\\assets\\sccripts\\startpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FDA718E-107C-51BA-5F8E-595786AC2DDA}|Assembly-CSharp.csproj|solutionrelative:assets\\sccripts\\startpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FDA718E-107C-51BA-5F8E-595786AC2DDA}|Assembly-CSharp.csproj|D:\\Pachinko\\assets\\sccripts\\destroyball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FDA718E-107C-51BA-5F8E-595786AC2DDA}|Assembly-CSharp.csproj|solutionrelative:assets\\sccripts\\destroyball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FDA718E-107C-51BA-5F8E-595786AC2DDA}|Assembly-CSharp.csproj|D:\\Pachinko\\assets\\sccripts\\plank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FDA718E-107C-51BA-5F8E-595786AC2DDA}|Assembly-CSharp.csproj|solutionrelative:assets\\sccripts\\plank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StartPanel.cs",
+              "DocumentMoniker": "D:\\Pachinko\\Assets\\Sccripts\\StartPanel.cs",
+              "RelativeDocumentMoniker": "Assets\\Sccripts\\StartPanel.cs",
+              "ToolTip": "D:\\Pachinko\\Assets\\Sccripts\\StartPanel.cs",
+              "RelativeToolTip": "Assets\\Sccripts\\StartPanel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T07:45:13.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DestroyBall.cs",
+              "DocumentMoniker": "D:\\Pachinko\\Assets\\Sccripts\\DestroyBall.cs",
+              "RelativeDocumentMoniker": "Assets\\Sccripts\\DestroyBall.cs",
+              "ToolTip": "D:\\Pachinko\\Assets\\Sccripts\\DestroyBall.cs",
+              "RelativeToolTip": "Assets\\Sccripts\\DestroyBall.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T07:44:19.831Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Plank.cs",
+              "DocumentMoniker": "D:\\Pachinko\\Assets\\Sccripts\\Plank.cs",
+              "RelativeDocumentMoniker": "Assets\\Sccripts\\Plank.cs",
+              "ToolTip": "D:\\Pachinko\\Assets\\Sccripts\\Plank.cs",
+              "RelativeToolTip": "Assets\\Sccripts\\Plank.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T07:37:41.511Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GameplayPanel.cs",
+              "DocumentMoniker": "D:\\Pachinko\\Assets\\Sccripts\\GameplayPanel.cs",
+              "RelativeDocumentMoniker": "Assets\\Sccripts\\GameplayPanel.cs",
+              "ToolTip": "D:\\Pachinko\\Assets\\Sccripts\\GameplayPanel.cs",
+              "RelativeToolTip": "Assets\\Sccripts\\GameplayPanel.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAowGIAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T07:36:07.144Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
