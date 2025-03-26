@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.Runtime.InteropServices; // Import để gọi JavaScript từ WebGL
 
 public class GameplayPanel : MonoBehaviour
 {
@@ -21,14 +22,20 @@ public class GameplayPanel : MonoBehaviour
     public int timeSeconds;
     public TextMeshProUGUI timeText;
 
+    [DllImport("__Internal")]
+    private static extern void UnityShowAd(); // Hàm gọi quảng cáo trong JavaScript
+
     void Start()
     {
-        minX = -Screen.width / 2 + offsetX; // -1080 / 2 + 100 = -540 +100 = -440
-        maxX = Screen.width / 2 - offsetX; // 1080 / 2 - 100 = 540 - 100 = 440
+        Debug.Log(Screen.width);
+        minX = -Screen.width / 2 + offsetX;
+        maxX = Screen.width / 2 - offsetX;
+        Debug.Log(minX + ", " + maxX);
         StartGame();
     }
 
-    public void StartGame() {
+    public void StartGame()
+    {
         score = 0;
         UpdateScoreText();
         ballList = new List<GameObject>();
@@ -36,17 +43,16 @@ public class GameplayPanel : MonoBehaviour
         StartCoroutine(TimeCoroutine());
     }
 
-    IEnumerator SpawnBallCoroutine() {
+    IEnumerator SpawnBallCoroutine()
+    {
         yield return new WaitForSeconds(1);
         SpawnBallAtRandomPosition();
 
-        // 10s dau tien
         yield return new WaitForSeconds(5);
         SpawnBallAtRandomPosition();
         yield return new WaitForSeconds(5);
         SpawnBallAtRandomPosition();
 
-        // 10s thu hai
         yield return new WaitForSeconds(3);
         SpawnBallAtRandomPosition();
         yield return new WaitForSeconds(3);
@@ -55,7 +61,6 @@ public class GameplayPanel : MonoBehaviour
         SpawnBallAtRandomPosition();
         yield return new WaitForSeconds(1);
 
-        // 10s thu ba
         yield return new WaitForSeconds(2);
         SpawnBallAtRandomPosition();
         yield return new WaitForSeconds(2);
@@ -68,35 +73,51 @@ public class GameplayPanel : MonoBehaviour
         SpawnBallAtRandomPosition();
     }
 
-    void SpawnBallAtRandomPosition() {
+    void SpawnBallAtRandomPosition()
+    {
         GameObject ball = Instantiate(ballPrefab);
         ball.transform.SetParent(dropBallTransform);
         ball.transform.localPosition = new Vector3(Random.Range(minX, maxX), 0, 0);
         ballList.Add(ball);
     }
 
-    public bool CheckGameOver() {
-        if (ballList.Count == 0) {
+    public bool CheckGameOver()
+    {
+        Debug.Log("Time left: " + timeSeconds);
+        if (timeSeconds == 0)
+        {
+            FindObjectOfType<Plank>().SetGameOver();
+
+#if UNITY_WEBGL && !UNITY_EDITOR
+            UnityShowAd(); // Gọi quảng cáo chỉ khi chạy trên WebGL
+#endif
+
+            Invoke("SwitchToRestartPanel", 2.5f); // Chuyển sang màn hình restart sau 2.5 giây
             return true;
         }
         return false;
     }
 
-    public void SwitchToRestartPanel() {
+    public void SwitchToRestartPanel()
+    {
         uiManager.SetActiveRestartPanel(true);
     }
 
-    public void UpdateScoreText() {
+    public void UpdateScoreText()
+    {
         scoreText.text = "Score: " + score;
     }
 
-    IEnumerator TimeCoroutine() {
-        timeSeconds = 10;
+    IEnumerator TimeCoroutine()
+    {
+        timeSeconds = 30;
         timeText.text = "Time: " + timeSeconds;
-        while (timeSeconds > 0) {
+        while (timeSeconds > 0)
+        {
             yield return new WaitForSeconds(1);
             timeSeconds--;
             timeText.text = "Time: " + timeSeconds;
         }
+        CheckGameOver();
     }
 }
